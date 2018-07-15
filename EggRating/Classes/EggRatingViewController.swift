@@ -115,7 +115,8 @@ class EggRatingViewController: UIViewController {
         let minRatingToAppStore = EggRating.minRatingToAppStore > 5 ? 5 : EggRating.minRatingToAppStore
         
         if rating >= minRatingToAppStore {
-            showRateInAppStoreAlertController()
+            //showRateInAppStoreAlertController()
+            sendUserToAppStore()
             
             // only save last rated version if user rates more than mininum score
             UserDefaults.standard.set(EggRating.appVersion, forKey: EggRatingUserDefaultsKey.lastVersionRatedKey.rawValue)
